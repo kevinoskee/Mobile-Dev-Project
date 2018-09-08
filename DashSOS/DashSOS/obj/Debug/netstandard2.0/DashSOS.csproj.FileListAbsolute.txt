@@ -1,0 +1,11 @@
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.deps.json
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.csproj.CoreCompileInputs.cache
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.App.xaml.g.cs
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.View.MainPage.xaml.g.cs
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.AssemblyInfoInputs.cache
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.AssemblyInfo.cs
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.pdb
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.pdb
