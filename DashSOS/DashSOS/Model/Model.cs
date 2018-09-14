@@ -11,14 +11,14 @@ namespace DashSOS.Model
         public string Latitude { get; set; }
         public string Location { get; set; }
     }
-    public class PersonModel
+    public class EmergencyModel
     {
-        public string Name { get; set; }
-        public string Number { get; set; }
+        public static string ImageSource { get; set; }
+        public static string EmergencyName { get; set; }
+        public static string ContactName { get; set; }
+        public static string ContactNumber { get; set; }
+        public static string MessageTemplate { get; set; }
     }
-    public class MessageModel
-    {
-        public string Message { get; set; }
-    }
+   
 
 }

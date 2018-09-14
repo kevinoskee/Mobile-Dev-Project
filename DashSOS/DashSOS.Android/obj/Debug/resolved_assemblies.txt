@@ -7,6 +7,8 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Plugin.CurrentActivity.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Plugin.Geolocator.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Plugin.Permissions.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Rg.Plugins.Popup.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Rg.Plugins.Popup.Droid.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Core.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Runtime.dll
@@ -53,10 +55,12 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Security.SecureString.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Web.Services.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Xml.XPath.XDocument.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.ComponentModel.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Reflection.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Threading.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Collections.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Collections.Concurrent.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Reflection.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Linq.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll
@@ -66,8 +70,6 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.ObjectModel.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Globalization.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.ComponentModel.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Xml.ReaderWriter.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.IO.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Dynamic.Runtime.dll

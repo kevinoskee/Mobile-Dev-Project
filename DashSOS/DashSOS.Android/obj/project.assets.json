@@ -31,6 +31,20 @@
           "lib/monoandroid71/Plugin.Permissions.dll": {}
         }
       },
+      "Rg.Plugins.Popup/1.1.4.168": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.121934"
+        },
+        "compile": {
+          "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll": {},
+          "lib/MonoAndroid/Rg.Plugins.Popup.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll": {},
+          "lib/MonoAndroid/Rg.Plugins.Popup.dll": {}
+        }
+      },
       "Xam.Plugin.Geolocator/4.5.0.6": {
         "type": "package",
         "dependencies": {
@@ -334,6 +348,21 @@
           "build/netstandard1.0/Xamarin.Forms.props": {},
           "build/netstandard1.0/Xamarin.Forms.targets": {}
         }
+      },
+      "DashSOS/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Rg.Plugins.Popup": "1.1.4.168",
+          "Xam.Plugin.Geolocator": "4.5.0.6",
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "compile": {
+          "bin/placeholder/DashSOS.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DashSOS.dll": {}
+        }
       }
     }
   },
@@ -369,6 +398,35 @@
         "plugin.permissions.3.0.0.12.nupkg.sha512",
         "plugin.permissions.nuspec",
         "readme.txt"
+      ]
+    },
+    "Rg.Plugins.Popup/1.1.4.168": {
+      "sha512": "pARxyFFrnOoCZfRbAiE8v3+8py/sH5SX8NJAjfaydJJO3cm13yNaNw8EelEONJVQY2T0zFhCfZSc4CDjjaSylQ==",
+      "type": "package",
+      "path": "rg.plugins.popup/1.1.4.168",
+      "files": [
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.dll.mdb",
+        "lib/MonoAndroid/Rg.Plugins.Popup.Droid.pdb",
+        "lib/MonoAndroid/Rg.Plugins.Popup.dll",
+        "lib/MonoAndroid/Rg.Plugins.Popup.pdb",
+        "lib/MonoTouch/Rg.Plugins.Popup.IOS.dll",
+        "lib/MonoTouch/Rg.Plugins.Popup.IOS.pdb",
+        "lib/MonoTouch/Rg.Plugins.Popup.dll",
+        "lib/MonoTouch/Rg.Plugins.Popup.pdb",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.dll",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.IOS.pdb",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.dll",
+        "lib/Xamarin.IOS/Rg.Plugins.Popup.pdb",
+        "lib/netstandard1.0/Rg.Plugins.Popup.dll",
+        "lib/netstandard1.0/Rg.Plugins.Popup.pdb",
+        "lib/uap10.0/Rg.Plugins.Popup.UWP.dll",
+        "lib/uap10.0/Rg.Plugins.Popup.UWP.pdb",
+        "lib/uap10.0/Rg.Plugins.Popup.dll",
+        "lib/uap10.0/Rg.Plugins.Popup.pdb",
+        "readme.txt",
+        "rg.plugins.popup.1.1.4.168.nupkg.sha512",
+        "rg.plugins.popup.nuspec"
       ]
     },
     "Xam.Plugin.Geolocator/4.5.0.6": {
@@ -777,10 +835,17 @@
         "xamarin.forms.2.5.0.280555.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "DashSOS/1.0.0": {
+      "type": "project",
+      "path": "../DashSOS/DashSOS.csproj",
+      "msbuildProject": "../DashSOS/DashSOS.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v7.1": [
+      "DashSOS >= 1.0.0",
+      "Rg.Plugins.Popup >= 1.1.4.168",
       "Xam.Plugin.Geolocator >= 4.5.0.6",
       "Xamarin.Android.Support.Design >= 25.4.0.2",
       "Xamarin.Android.Support.v4 >= 25.4.0.2",
@@ -821,13 +886,21 @@
       },
       "frameworks": {
         "monoandroid71": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Kevin\\Documents\\Mobile App Dev\\Projects\\DashSOS\\DashSOS\\DashSOS\\DashSOS.csproj": {
+              "projectPath": "C:\\Users\\Kevin\\Documents\\Mobile App Dev\\Projects\\DashSOS\\DashSOS\\DashSOS\\DashSOS.csproj"
+            }
+          }
         }
       }
     },
     "frameworks": {
       "monoandroid71": {
         "dependencies": {
+          "Rg.Plugins.Popup": {
+            "target": "Package",
+            "version": "[1.1.4.168, )"
+          },
           "Xam.Plugin.Geolocator": {
             "target": "Package",
             "version": "[4.5.0.6, )"

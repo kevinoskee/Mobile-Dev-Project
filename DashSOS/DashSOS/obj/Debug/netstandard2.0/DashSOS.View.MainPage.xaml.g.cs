@@ -8,20 +8,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DashSOS {
+namespace DashSOS.View {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\Kevin\\Documents\\Mobile App Dev\\Projects\\DashSOS\\DashSOS\\DashSOS\\View\\Mai" +
         "nPage.xaml")]
-    public partial class MainPage : global::Xamarin.Forms.ContentPage {
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
-        private global::Xamarin.Forms.Button button;
+    public partial class MainPage : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(MainPage));
-            button = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "button");
         }
     }
 }

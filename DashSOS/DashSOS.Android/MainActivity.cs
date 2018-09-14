@@ -24,7 +24,7 @@ namespace DashSOS.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-            
+            Rg.Plugins.Popup.Popup.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
 
@@ -34,7 +34,7 @@ namespace DashSOS.Droid
 
             if (locationManager.IsProviderEnabled(LocationManager.GpsProvider) == false)
             {
-                ShowGPSDisabledAlertToUser();
+              //  ShowGPSDisabledAlertToUser();
             }
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)

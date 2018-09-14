@@ -9,11 +9,12 @@ namespace DashSOS
 {
 	public partial class App : Application
 	{
+        public static MasterDetailPage MasterDetail { get; set; }
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new DashSOS.MainPage();
+			MainPage = new DashSOS.View.MainPage();
 		}
 
 		protected override void OnStart ()

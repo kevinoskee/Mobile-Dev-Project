@@ -36,12 +36,12 @@ namespace DashSOS.Droid
         }
         public async void Send(string number,string message) //temporary
         {
-            string currLocation = "";
-            var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
-            var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
-            currLocation = "Location : " + position.Longitude.ToString() + "," + position.Latitude.ToString();
-            SmsManager.Default.SendTextMessage(number, null, message + currLocation, null, null);
+            //string currLocation = "";
+            //var locator = CrossGeolocator.Current;
+            //locator.DesiredAccuracy = 50;
+            //var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
+            //currLocation = "Location : " + position.Longitude.ToString() + "," + position.Latitude.ToString();
+            SmsManager.Default.SendTextMessage(number, null, message, null, null);
         }
     }
 }

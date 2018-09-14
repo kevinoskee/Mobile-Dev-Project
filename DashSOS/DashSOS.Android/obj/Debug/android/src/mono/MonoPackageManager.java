@@ -112,6 +112,8 @@ class MonoPackageManager_Resources {
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Geolocator.dll",
 		"Plugin.Permissions.dll",
+		"Rg.Plugins.Popup.dll",
+		"Rg.Plugins.Popup.Droid.dll",
 		"Xamarin.Android.Support.Animated.Vector.Drawable.dll",
 		"Xamarin.Android.Support.Annotations.dll",
 		"Xamarin.Android.Support.Compat.dll",

@@ -14,6 +14,14 @@ Plugin.Geolocator.GeolocationSingleListener, Plugin.Geolocator;md58570ec34341e49
 Plugin.Geolocator.GeolocationSingleListener, Plugin.Geolocator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md58570ec34341e498d0f7cffdfce1b1246.GeolocationSingleListener
 Plugin.Geolocator.GeolocationSingleListener;md58570ec34341e498d0f7cffdfce1b1246.GeolocationSingleListener
 plugin.geolocator.GeolocationSingleListener;md58570ec34341e498d0f7cffdfce1b1246.GeolocationSingleListener
+Rg.Plugins.Popup.Droid.Renderers.PopupPageRenderer, Rg.Plugins.Popup.Droid;md57b3300708f1415736e2459faa8dfbb6f.PopupPageRenderer
+Rg.Plugins.Popup.Droid.Renderers.PopupPageRenderer, Rg.Plugins.Popup.Droid, Version=1.1.4.168, Culture=neutral, PublicKeyToken=null;md57b3300708f1415736e2459faa8dfbb6f.PopupPageRenderer
+Rg.Plugins.Popup.Droid.Renderers.PopupPageRenderer;md57b3300708f1415736e2459faa8dfbb6f.PopupPageRenderer
+rg.plugins.popup.droid.renderers.PopupPageRenderer;md57b3300708f1415736e2459faa8dfbb6f.PopupPageRenderer
+Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener, Rg.Plugins.Popup.Droid;md5167fb3d28ab218e5859eaf2aab3664d6.RgGestureDetectorListener
+Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener, Rg.Plugins.Popup.Droid, Version=1.1.4.168, Culture=neutral, PublicKeyToken=null;md5167fb3d28ab218e5859eaf2aab3664d6.RgGestureDetectorListener
+Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener;md5167fb3d28ab218e5859eaf2aab3664d6.RgGestureDetectorListener
+rg.plugins.popup.droid.gestures.RgGestureDetectorListener;md5167fb3d28ab218e5859eaf2aab3664d6.RgGestureDetectorListener
 Android.Support.V4.Widget.SearchViewCompat/IOnCloseListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat.IOnCloseListenerImplementor;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "cebd43993cbffe7725bbf8cddecc05f85b0a4ccb"
+    "signature": "0a419ea0e34ffe0b4592fad02ee2aafa18d91d75"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,7 @@
       "DashSOS/1.0.0": {
         "dependencies": {
           "NETStandard.Library": "2.0.1",
+          "Rg.Plugins.Popup": "1.1.4.168",
           "Xam.Plugin.Geolocator": "4.5.0.6",
           "Xamarin.Forms": "2.5.0.280555"
         },
@@ -21,6 +22,14 @@
       "NETStandard.Library/2.0.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
+        }
+      },
+      "Rg.Plugins.Popup/1.1.4.168": {
+        "dependencies": {
+          "Xamarin.Forms": "2.5.0.280555"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Rg.Plugins.Popup.dll": {}
         }
       },
       "Xam.Plugin.Geolocator/4.5.0.6": {
@@ -56,6 +65,13 @@
       "sha512": "sha512-oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "path": "netstandard.library/2.0.1",
       "hashPath": "netstandard.library.2.0.1.nupkg.sha512"
+    },
+    "Rg.Plugins.Popup/1.1.4.168": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pARxyFFrnOoCZfRbAiE8v3+8py/sH5SX8NJAjfaydJJO3cm13yNaNw8EelEONJVQY2T0zFhCfZSc4CDjjaSylQ==",
+      "path": "rg.plugins.popup/1.1.4.168",
+      "hashPath": "rg.plugins.popup.1.1.4.168.nupkg.sha512"
     },
     "Xam.Plugin.Geolocator/4.5.0.6": {
       "type": "package",
