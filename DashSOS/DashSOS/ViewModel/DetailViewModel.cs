@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 using Rg.Plugins.Popup.Services;
 using DashSOS.View;
 using DashSOS.Model;
+using System.Linq;
+using Xamarin.Forms.Xaml;
+using DashSOS.ViewModel;
+using DashSOS.Database;
 namespace DashSOS.ViewModel
 {
     public class DetailViewModel
@@ -15,16 +19,16 @@ namespace DashSOS.ViewModel
         public Action<string> ChangeButton;
         public bool configStat;
         public ICommand Configure { protected set; get; }
-        public ICommand Save { protected set; get; }
-        public ICommand Cancel { protected set; get; }
+        public ICommand Done { protected set; get; }
+        public ICommand Return { protected set; get; }
         public ICommand EmergencyTap { protected set; get; }
 
 
         public DetailViewModel()
         {
             Configure = new Command(OnConfigure);
-            Save = new Command(OnSave);
-            Cancel = new Command(OnCancel);
+            Done = new Command(OnDone);
+            Return = new Command(OnReturn);
             EmergencyTap= new Command(OnEmergencyTap);
         }
 
@@ -33,58 +37,41 @@ namespace DashSOS.ViewModel
             ChangeButton("configure");
             configStat = true;
         }
-        public void OnSave()
+        public void OnDone()
         {
-            ChangeButton("save");
+            ChangeButton("done");
             configStat = false;
         }
-        public void OnCancel()
+        public void OnReturn()
         {
-            ChangeButton("cancel");
+            ChangeButton("return");
             configStat = false;
         }
         public void OnEmergencyTap(object emergency)
         {
             if(configStat == true)
             {
-              SetModel(emergency);
-              PopupNavigation.Instance.PushAsync(new ConfigureView());  
+              PopupNavigation.Instance.PushAsync(new ConfigureView(emergency.ToString()));  
             }
             else
             {
                 GetModel(emergency);
             }
         }
-        public void SetModel(object emergency)
-        {
-            switch (emergency)
-            {
-                case "doctor":
-                    //insert database process
-
-                    //temporary
-                    EmergencyModel.ImageSource = "doctor.png";
-                    EmergencyModel.EmergencyName = "DOCTOR";
-                    EmergencyModel.ContactName = "Asian Hospital";
-                    EmergencyModel.ContactNumber = "09478227779";
-                    EmergencyModel.MessageTemplate = "I need medical emergency";
-                    break;
-            }
-        }
         public void GetModel(object emergency)
         {
-            switch (emergency)
-            {
-                case "doctor":
-                    //insert database process
+        //    switch (emergency)
+        //    {
+        //        //case "medical":
+        //        //    //insert database process
 
-                    //temporary
-                    EmergencyModel.ContactName = "Asian Hospital";
-                    EmergencyModel.ContactNumber = "09478227779";
-                    EmergencyModel.MessageTemplate = "I need medical emergency";
-                    DependencyService.Get<ISendSMS>().Send(EmergencyModel.ContactNumber, EmergencyModel.MessageTemplate);                 
-                    break;
-            }
+        //        //    //temporary
+        //        //    EmergencyModel.ContactName = "Asian Hospital";
+        //        //    EmergencyModel.ContactNumber = "09478227779";
+        //        //    EmergencyModel.MessageTemplate = "I need medical emergency";
+        //        //    DependencyService.Get<ISendSMS>().Send(EmergencyModel.ContactNumber, EmergencyModel.MessageTemplate);                 
+        //        //    break;
+        //    }
         }
     }
 }

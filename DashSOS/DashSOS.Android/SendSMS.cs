@@ -34,14 +34,14 @@ namespace DashSOS.Droid
             locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
       //      Toast.MakeText(Forms.Context, locationModel.Location, ToastLength.Short).Show();
         }
-        public async void Send(string number,string message) //temporary
+        public void Send(string number,string message) //temporary
         {
             //string currLocation = "";
             //var locator = CrossGeolocator.Current;
             //locator.DesiredAccuracy = 50;
             //var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
             //currLocation = "Location : " + position.Longitude.ToString() + "," + position.Latitude.ToString();
-            SmsManager.Default.SendTextMessage(number, null, message, null, null);
+             SmsManager.Default.SendTextMessage(number, null, message, null, null);
         }
     }
 }

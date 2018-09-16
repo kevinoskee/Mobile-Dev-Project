@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "0a419ea0e34ffe0b4592fad02ee2aafa18d91d75"
+    "signature": "a61924d7801e2b39f0512e35a0a61e5430aa457c"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,7 +12,8 @@
           "NETStandard.Library": "2.0.1",
           "Rg.Plugins.Popup": "1.1.4.168",
           "Xam.Plugin.Geolocator": "4.5.0.6",
-          "Xamarin.Forms": "2.5.0.280555"
+          "Xamarin.Forms": "2.5.0.280555",
+          "sqlite-net-pcl": "1.5.231"
         },
         "runtime": {
           "DashSOS.dll": {}
@@ -30,6 +31,33 @@
         },
         "runtime": {
           "lib/netstandard1.0/Rg.Plugins.Popup.dll": {}
+        }
+      },
+      "sqlite-net-pcl/1.5.231": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.1",
+          "SQLitePCLRaw.bundle_green": "1.1.11"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLite-net.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_green/1.1.11": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.1",
+          "SQLitePCLRaw.core": "1.1.11"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_green.dll": {},
+          "lib/netstandard1.1/SQLitePCLRaw.batteries_v2.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/1.1.11": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.1/SQLitePCLRaw.core.dll": {}
         }
       },
       "Xam.Plugin.Geolocator/4.5.0.6": {
@@ -72,6 +100,27 @@
       "sha512": "sha512-pARxyFFrnOoCZfRbAiE8v3+8py/sH5SX8NJAjfaydJJO3cm13yNaNw8EelEONJVQY2T0zFhCfZSc4CDjjaSylQ==",
       "path": "rg.plugins.popup/1.1.4.168",
       "hashPath": "rg.plugins.popup.1.1.4.168.nupkg.sha512"
+    },
+    "sqlite-net-pcl/1.5.231": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Sy+K+Wm2RZ+4b1uLHsaXvfR92Or71XxPXa2Id6msSOVkZKh+c+PUk/HQOAgxyhm3lhvysL0mK6Gd6mI69NJ9AA==",
+      "path": "sqlite-net-pcl/1.5.231",
+      "hashPath": "sqlite-net-pcl.1.5.231.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_green/1.1.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hqp8IF/RLjbypkLm+t+1RqAX8EKuWEkj7wkLXplfENQoPnE127cvTmaDvaQKtt7a5QsD/HNjFDr1z5f9q2wdPg==",
+      "path": "sqlitepclraw.bundle_green/1.1.11",
+      "hashPath": "sqlitepclraw.bundle_green.1.1.11.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/1.1.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QT17CyQAQIbTCu6pW5+uVA8BXqRzquiDI1tr5Un6c1YZcQydPmGPuYYng9xMs2UHUDYHbTu+JDkp55WR+qo9bQ==",
+      "path": "sqlitepclraw.core/1.1.11",
+      "hashPath": "sqlitepclraw.core.1.1.11.nupkg.sha512"
     },
     "Xam.Plugin.Geolocator/4.5.0.6": {
       "type": "package",

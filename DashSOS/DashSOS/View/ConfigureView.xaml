@@ -31,36 +31,37 @@
             <RowDefinition Height="0.3*" />
         </Grid.RowDefinitions>
         <Image x:Name="emergencyImage" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
-               HorizontalOptions="Center" VerticalOptions="Center"/>
+               HorizontalOptions="Center" VerticalOptions="Center"
+               Source="{Binding EmergencyImage}"/>
         <Label x:Name="emergencyName" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
-               Text="POLICE" Font="15" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"
+               Text="{Binding EmergencyName}" Font="15" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="Center"
                HorizontalOptions="Fill" VerticalOptions="Center"/>
         <Label Grid.Row="2" Grid.Column="0"
                Text="Contact Name" Font="15" TextColor="Black"
                HorizontalOptions="Start" VerticalOptions="Center"/>
         <Entry x:Name="contactName" Grid.Row="2" Grid.Column="1"
-               Text="Quezon City Police" FontSize="15" TextColor="Black"
+               Text="{Binding ContactName}" FontSize="15" TextColor="Black"
                HorizontalOptions="Fill" VerticalOptions="Center"/>
         <Label Grid.Row="3" Grid.Column="0"
                Text="Contact Number" Font="15" TextColor="Black"
                HorizontalOptions="Start" VerticalOptions="Center"/>
         <Entry x:Name="contactNumber" Grid.Row="3" Grid.Column="1"
-               Text="0912345678" FontSize="15" TextColor="Black"
+               Text="{Binding ContactNumber}" FontSize="15" TextColor="Black"
                HorizontalOptions="Fill" VerticalOptions="Center"
                Keyboard="Numeric"/>
         <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
                Text="Message" Font="15" TextColor="Black"
                HorizontalOptions="Center" VerticalOptions="Center"/>
         <Entry x:Name="messageTemplate"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
-               Text="Help me" FontSize="15" TextColor="Black"
+               Text="{Binding MessageTemplate}" FontSize="15" TextColor="Black"
                HorizontalOptions="Fill" VerticalOptions="Center"/>
         <Button Grid.Row="6" Grid.Column="0"
                 x:Name="saveBtn" BackgroundColor="#2ecc71" 
                 Text="SAVE" Font="20" TextColor="White" 
                 HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-                Clicked="Hide"/>
+                Command="{Binding Save}"/>
         <Button Grid.Row="6" Grid.Column="1"
-                x:Name="discardBtn" BackgroundColor="#2ecc71" 
+                x:Name="discardBtn" BackgroundColor="#7f8c8d" 
                 Text="DISCARD" Font="20" TextColor="White" 
                 HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                 Clicked="Hide"/>

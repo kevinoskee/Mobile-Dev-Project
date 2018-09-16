@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using DashSOS.ViewModel;
-
+using SQLite;
 namespace DashSOS.Model
 {
     public class LocationModel
@@ -11,14 +11,31 @@ namespace DashSOS.Model
         public string Latitude { get; set; }
         public string Location { get; set; }
     }
-    public class EmergencyModel
+    public class Emergency
     {
-        public static string ImageSource { get; set; }
-        public static string EmergencyName { get; set; }
-        public static string ContactName { get; set; }
-        public static string ContactNumber { get; set; }
-        public static string MessageTemplate { get; set; }
+
+        //   public int EmergencyId { get; set; }
+        [PrimaryKey]
+        public string EmergencyName { get; set; }
+        public string ContactName { get; set; }
+        public string ContactNumber { get; set; }
+        public string MessageTemplate { get; set; }
     }
-   
+   public class Profile
+    {
+        [PrimaryKey,AutoIncrement]
+        public int ProfileId { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public string HouseNumber { get; set; }
+        public string Street { get; set; }
+        public string Barangay { get; set; }
+        public string Town { get; set; }
+        public string City { get; set; }
+        public DateTime Birthdate { get; set; }
+        public string BloodGroup { get; set; }
+        public string OtherInfo { get; set; }
+    }
 
 }

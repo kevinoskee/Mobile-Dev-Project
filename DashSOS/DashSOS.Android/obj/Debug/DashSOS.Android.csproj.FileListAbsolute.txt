@@ -18,12 +18,10 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\layout\toolbar.xml
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\values\styles.xml
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable\hamburger.png
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\police.png
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\doctor.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\family.png
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\fireman.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\R.cs.flag
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\uploadflags.txt
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\profile.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\Mono.Android.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\mscorlib.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\Rg.Plugins.Popup.pdb
@@ -101,7 +99,9 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Web.Services.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Xml.Linq.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Xml.pdb
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\profile.png
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\security.png
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\medical.png
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\fire.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\DashSOS.Android.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\linksrc\DashSOS.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\linksrc\DashSOS.Android.dll.mdb
