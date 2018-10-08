@@ -8,5 +8,6 @@ namespace DashSOS
     {
         void Message(string number,string location);
         void Send(string number,string message);
+        void Test();
     }
 }

@@ -55,5 +55,24 @@ namespace DashSOS.Droid
             //currLocation = "Location : " + position.Longitude.ToString() + "," + position.Latitude.ToString();
              SmsManager.Default.SendTextMessage(number, null, message, null, null);
         }
+        public async void Test()
+        {
+            Toast.MakeText(Forms.Context, "Getting Location", ToastLength.Short).Show();
+            string strLocation="";
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 50;
+            var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20));
+            //locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
+
+
+            var reversePosition = new Position(position.Latitude, position.Longitude);
+            var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
+            foreach (var address in possibleAddresses)
+                strLocation += address + "\n";
+
+
+
+            Toast.MakeText(Forms.Context, strLocation, ToastLength.Short).Show();
+        }
     }
 }

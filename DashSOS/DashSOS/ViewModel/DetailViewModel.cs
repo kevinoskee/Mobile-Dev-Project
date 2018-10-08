@@ -55,7 +55,8 @@ namespace DashSOS.ViewModel
             }
             else
             {
-                GetModel(emergency);
+                //GetModel(emergency);
+                TestMessage();
             }
         }
         public void GetModel(object emergency)
@@ -72,6 +73,11 @@ namespace DashSOS.ViewModel
         //        //    DependencyService.Get<ISendSMS>().Send(EmergencyModel.ContactNumber, EmergencyModel.MessageTemplate);                 
         //        //    break;
         //    }
+        }
+        public void TestMessage()
+        {
+            DependencyService.Get<ISendSMS>().Test();
+
         }
     }
 }

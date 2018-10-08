@@ -1,7 +1,5 @@
 DashSOS
 FormsViewGroup
-PCLStorage.Abstractions
-PCLStorage
 Plugin.CurrentActivity
 Plugin.Geolocator
 Plugin.Permissions
@@ -31,10 +29,15 @@ Xamarin.Android.Support.v7.Palette
 Xamarin.Android.Support.v7.RecyclerView
 Xamarin.Android.Support.Vector.Drawable
 Xamarin.Forms.Core
+Xamarin.Forms.Maps.Android
+Xamarin.Forms.Maps
 Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 Xamarin.Forms.Xaml
+Xamarin.GooglePlayServices.Basement
+Xamarin.GooglePlayServices.Tasks
+Xamarin.GooglePlayServices.Base
+Xamarin.GooglePlayServices.Maps
 netstandard
-System.ComponentModel
-System.Resources.ResourceManager
 System.Reflection.Extensions
+System.Resources.ResourceManager
