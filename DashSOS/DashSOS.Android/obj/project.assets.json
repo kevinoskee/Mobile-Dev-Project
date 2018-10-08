@@ -118,6 +118,20 @@
           "lib/monoandroid71/Plugin.Geolocator.dll": {}
         }
       },
+      "Xam.Plugins.Forms.RoundedBoxView/1.0.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.0.0.6490"
+        },
+        "compile": {
+          "lib/MonoAndroid10/RoundedBoxView.Forms.Plugin.Abstractions.dll": {},
+          "lib/MonoAndroid10/RoundedBoxView.Forms.Plugin.Android.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/RoundedBoxView.Forms.Plugin.Abstractions.dll": {},
+          "lib/MonoAndroid10/RoundedBoxView.Forms.Plugin.Android.dll": {}
+        }
+      },
       "Xamarin.Android.Support.Animated.Vector.Drawable/25.4.0.2": {
         "type": "package",
         "dependencies": {
@@ -493,6 +507,7 @@
         "dependencies": {
           "Rg.Plugins.Popup": "1.1.4.168",
           "Xam.Plugin.Geolocator": "4.5.0.6",
+          "Xam.Plugins.Forms.RoundedBoxView": "1.0.0.7",
           "Xamarin.Forms": "3.2.0.871581",
           "sqlite-net-pcl": "1.5.231"
         },
@@ -695,6 +710,22 @@
         "readme.txt",
         "xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
         "xam.plugin.geolocator.nuspec"
+      ]
+    },
+    "Xam.Plugins.Forms.RoundedBoxView/1.0.0.7": {
+      "sha512": "FDD6J4458X3g8pnJxDGMz5IJW5Vz9+/INwKy0NAmI22uVwP+g6VwblOjJb4lqwPjffNfAx9Fmeeuz/u4aMFsZQ==",
+      "type": "package",
+      "path": "xam.plugins.forms.roundedboxview/1.0.0.7",
+      "files": [
+        "lib/MonoAndroid10/RoundedBoxView.Forms.Plugin.Abstractions.dll",
+        "lib/MonoAndroid10/RoundedBoxView.Forms.Plugin.Android.dll",
+        "lib/Xamarin.iOS10/RoundedBoxView.Forms.Plugin.Abstractions.dll",
+        "lib/Xamarin.iOS10/RoundedBoxView.Forms.Plugin.iOSUnified.dll",
+        "lib/portable-net45+wp8+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/RoundedBoxView.Forms.Plugin.Abstractions.dll",
+        "lib/wp8/RoundedBoxView.Forms.Plugin.Abstractions.dll",
+        "lib/wp8/RoundedBoxView.Forms.Plugin.WindowsPhone.dll",
+        "xam.plugins.forms.roundedboxview.1.0.0.7.nupkg.sha512",
+        "xam.plugins.forms.roundedboxview.nuspec"
       ]
     },
     "Xamarin.Android.Support.Animated.Vector.Drawable/25.4.0.2": {

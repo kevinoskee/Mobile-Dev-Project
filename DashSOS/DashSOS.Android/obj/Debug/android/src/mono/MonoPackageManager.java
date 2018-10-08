@@ -114,6 +114,8 @@ class MonoPackageManager_Resources {
 		"Plugin.Permissions.dll",
 		"Rg.Plugins.Popup.dll",
 		"Rg.Plugins.Popup.Droid.dll",
+		"RoundedBoxView.Forms.Plugin.Abstractions.dll",
+		"RoundedBoxView.Forms.Plugin.Android.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_green.dll",
 		"SQLitePCLRaw.batteries_v2.dll",

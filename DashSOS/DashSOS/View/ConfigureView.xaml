@@ -3,7 +3,9 @@
                  xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup">
+                 xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                 xmlns:custom="clr-namespace:DashSOS.Extras"
+                 xmlns:local="clr-namespace:DashSOS">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation DurationIn="400"
                                    DurationOut="300"
@@ -39,9 +41,24 @@
         <Label Grid.Row="2" Grid.Column="0"
                Text="Contact Name" Font="15" TextColor="Black"
                HorizontalOptions="Start" VerticalOptions="Center"/>
-        <Entry x:Name="contactName" Grid.Row="2" Grid.Column="1"
+        <custom:CustomEntry
+            x:Name="contactName"
+            Grid.Row ="2" Grid.Column="1"
+                                CornerRadius="18"
+                                IsCurvedCornersEnabled="True"
+                                BorderColor="BlueViolet"    
+                                HorizontalTextAlignment="Center"
+                                FontSize="17"
+                                HeightRequest="40"
+                                Placeholder="Custom Entry"
+                                PlaceholderColor="Gray"
+                                TextColor="Black"
+                                FontAttributes="Bold"
+                                WidthRequest="100"/>
+        
+        <!--<Entry x:Name="contactName" Grid.Row="2" Grid.Column="1"
                Text="{Binding ContactName}" FontSize="15" TextColor="Black"
-               HorizontalOptions="Fill" VerticalOptions="Center"/>
+               HorizontalOptions="Fill" VerticalOptions="Center"/>-->
         <Label Grid.Row="3" Grid.Column="0"
                Text="Contact Number" Font="15" TextColor="Black"
                HorizontalOptions="Start" VerticalOptions="Center"/>

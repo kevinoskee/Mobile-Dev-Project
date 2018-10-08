@@ -41,3 +41,5 @@ Xamarin.GooglePlayServices.Maps
 netstandard
 System.Reflection.Extensions
 System.Resources.ResourceManager
+RoundedBoxView.Forms.Plugin.Abstractions
+RoundedBoxView.Forms.Plugin.Android

@@ -65,7 +65,9 @@ namespace DashSOS.ViewModel
         public ConfigureViewModel(string emergency)
         {
             Save = new Command(OnSave);
-            ShowData(emergency);
+            EmergencyImage = "profile.png";
+            EmergencyName = emergency.ToUpper();
+            //ShowData(emergency);
         }
 
         public void ShowData(string emergency)

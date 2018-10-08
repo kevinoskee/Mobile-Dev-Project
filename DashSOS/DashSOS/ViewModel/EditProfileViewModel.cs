@@ -128,19 +128,19 @@ namespace DashSOS.ViewModel
         }
         public void ShowData()
         {
-            var _db = App.ProfileDatabase.GetProfile();
-            profileId = _db.ProfileId;
-            firstName = _db.FirstName;
-            middleName = _db.MiddleName;
-            lastName = _db.LastName;
-            houseNumber = _db.HouseNumber;
-            street = _db.Street;
-            barangay = _db.Barangay;
-            town = _db.Town;
-            city = _db.City;
-            birthDate = _db.Birthdate;
-            bloodGroup = _db.BloodGroup;
-            otherInfo = _db.OtherInfo;
+            //var _db = App.ProfileDatabase.GetProfile();
+            //profileId = _db.ProfileId;
+            //firstName = _db.FirstName;
+            //middleName = _db.MiddleName;
+            //lastName = _db.LastName;
+            //houseNumber = _db.HouseNumber;
+            //street = _db.Street;
+            //barangay = _db.Barangay;
+            //town = _db.Town;
+            //city = _db.City;
+            //birthDate = _db.Birthdate;
+            //bloodGroup = _db.BloodGroup;
+            //otherInfo = _db.OtherInfo;
         }
         public void OnCreate()
         {
