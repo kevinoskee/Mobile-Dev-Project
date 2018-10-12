@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DashSOS"
+             x:Class="DashSOS.View.NewContact">
+
+    <Grid Padding="20,5,20,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#B3486684" RowSpacing="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label  x:Name="contactId" x:FieldModifier="Public" Grid.Row="0"
+               TextColor="Black"/>
+        <Label x:Name="contactName" x:FieldModifier="Public" Grid.Row="0"
+               FontSize="15" TextColor="White"
+               HorizontalOptions="Fill" VerticalOptions="Center"/>
+        <Entry x:Name="contactNumber" x:FieldModifier="Public" Placeholder="CONTACT NUMBER" Text="{Binding ContactNumber}" Grid.Row="1"
+               FontSize="15" TextColor="White"
+               HorizontalOptions="Fill" VerticalOptions="Center"
+               Keyboard="Numeric"/>
+
+    </Grid>
+    <ContentView.GestureRecognizers>
+        <SwipeGestureRecognizer 
+                                Swiped="OnSwiped"
+                                Direction="Left"/>
+    </ContentView.GestureRecognizers>
+</ContentView>

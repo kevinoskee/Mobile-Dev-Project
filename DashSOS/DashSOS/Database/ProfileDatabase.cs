@@ -6,52 +6,41 @@ using SQLite;
 using DashSOS.Model;
 using System.Linq;
 using Xamarin.Forms;
-using DashSOS.Interface;
 using System.Collections;
 namespace DashSOS.Database
 {
     public class ProfileDatabase
     {
-        private SQLiteConnection conn;
+        private SQLiteAsyncConnection conn;
         //CREATE  
-        public ProfileDatabase()
+        public ProfileDatabase(string dbPath)
         {
-            conn = DependencyService.Get<ISQLite>().GetConnection();
-            conn.CreateTable<Profile>();
+            conn = new SQLiteAsyncConnection(dbPath);
+            conn.CreateTableAsync<Profile>().Wait();
         }
 
         //READ  
-        public Profile GetProfile()
+        public Task<Profile> GetProfileAsync()
         {
-            return conn.Table<Profile>().First();
-        }
-
-        //CHECK IF EMPTY
-        public bool CheckProfile()
-        {
-            var entryCount = conn.Table<Profile>().Count();
-            if (entryCount > 0)
-                return true;
-            else
-                return false;
+            return conn.Table<Profile>().FirstOrDefaultAsync();
         }
 
         //INSERT  
         public string AddProfile(Profile profile)
         {
-            conn.Insert(profile);
+            conn.InsertAsync(profile);
             return "success";
         }
         //DELETE  
         public string DeleteProfile(int id)
         {
-            conn.Delete<Profile>(id);
+            conn.DeleteAsync<Profile>(id);
             return "success";
         }
         //EDIT
         public string UpdateProfile(Profile profile)
         {
-            conn.Update(profile);
+            conn.UpdateAsync(profile);
             return "success";
         }
 

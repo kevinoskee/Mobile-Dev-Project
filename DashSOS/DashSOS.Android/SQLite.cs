@@ -19,12 +19,12 @@ namespace DashSOS.Droid
 {
     public class Droid_SQLite : ISQLite
     {
-        public SQLite.SQLiteConnection GetConnection()
+        public SQLite.SQLiteAsyncConnection GetConnection()
         {
-            var dbName = "Profile.sqlite";
+            var dbName = "DashSOS.db3";
             var dbPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
-            var path = System.IO.Path.Combine(dbPath, dbName);
-            var conn = new SQLite.SQLiteConnection(path);
+            var path = Path.Combine(dbPath, dbName);
+            var conn = new SQLite.SQLiteAsyncConnection(path);
             return conn;
         }
     }

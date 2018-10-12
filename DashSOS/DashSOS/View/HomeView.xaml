@@ -1,10 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DashSOS.View.DetailView"
+             x:Class="DashSOS.View.HomeView"
              Title="Dash SOS"
-             BackgroundColor="#2c3e50"
-             >
+             BackgroundColor="#2c3e50">
     <Grid RowSpacing="10" ColumnSpacing="10" Padding="20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -18,17 +17,15 @@
             <RowDefinition Height="0.3*" />
         </Grid.RowDefinitions>
 
-        <Image Grid.Row="0" Grid.Column="0" 
-               Source="security.png" 
+        <Image x:Name="Police" Grid.Row="0" Grid.Column="0" 
                HorizontalOptions="Center" VerticalOptions="Center">
             <Image.GestureRecognizers>
                 <TapGestureRecognizer
                     Command="{Binding EmergencyTap}"
-                    CommandParameter="Security"/>
+                    CommandParameter="Police"/>
             </Image.GestureRecognizers>
         </Image>
-        <Image Grid.Row="0" Grid.Column="1" 
-               Source="medical.png" 
+        <Image x:Name="Medical"  Grid.Row="0" Grid.Column="1"  
                HorizontalOptions="Center" VerticalOptions="Center">
             <Image.GestureRecognizers>
                 <TapGestureRecognizer
@@ -36,8 +33,7 @@
                     CommandParameter="Medical"/>
             </Image.GestureRecognizers>
         </Image>
-        <Image Grid.Row="2" Grid.Column="0" 
-               Source="fire.png" 
+        <Image x:Name="Fire" Grid.Row="2" Grid.Column="0" 
                HorizontalOptions="Center" VerticalOptions="Center">
             <Image.GestureRecognizers>
                 <TapGestureRecognizer
@@ -45,8 +41,7 @@
                     CommandParameter="Fire"/>
             </Image.GestureRecognizers>
         </Image>
-        <Image Grid.Row="2" Grid.Column="1" 
-               Source="family.png" 
+        <Image x:Name="Family" Grid.Row="2" Grid.Column="1" 
                HorizontalOptions="Center" VerticalOptions="Center">
             <Image.GestureRecognizers>
                 <TapGestureRecognizer
@@ -55,25 +50,25 @@
             </Image.GestureRecognizers>
         </Image>
 
-        <Label Grid.Row="1" Grid.Column="0" 
-               Text="Security" Font="15" FontAttributes="Bold" TextColor="White" 
+        <Label x:Name="PoliceText" Grid.Row="1" Grid.Column="0" 
+               Text="Police" Font="15" FontAttributes="Bold" TextColor="White" 
                HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Grid.Row="1" Grid.Column="1" 
+        <Label x:Name="MedicalText" Grid.Row="1" Grid.Column="1" 
                Text="Medical" Font="15" FontAttributes="Bold" TextColor="White" 
                HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Grid.Row="3" Grid.Column="0" 
+        <Label x:Name="FireText" Grid.Row="3" Grid.Column="0" 
                Text="Fire" Font="15" FontAttributes="Bold" TextColor="White" 
                HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Grid.Row="3" Grid.Column="1" 
+        <Label x:Name="FamilyText" Grid.Row="3" Grid.Column="1" 
                Text="Family" Font="15" FontAttributes="Bold" TextColor="White" 
                HorizontalOptions="Center" VerticalOptions="Center"/>
         
         <Button x:Name="configBtn"
                  Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
-                Text="CONFIGURE" FontSize="20" FontAttributes="Bold" TextColor="White"
+                Text="SET UP" FontSize="20" FontAttributes="Bold" TextColor="White"
                 BackgroundColor="#2ecc71"
                  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-               Command="{Binding Configure}"/>
+               Command="{Binding SetUp}"/>
         <Button x:Name="doneBtn" IsVisible="False"
                  Grid.Row="4" Grid.Column="0"
                 Text="DONE" FontSize="20" FontAttributes="Bold" TextColor="White"

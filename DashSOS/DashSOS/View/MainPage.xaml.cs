@@ -14,11 +14,11 @@ namespace DashSOS.View
             /* var mainviewModel = new MainViewModel();
              this.BindingContext = mainviewModel;*/
             InitializeComponent();
-            var detail = new NavigationPage(new DetailView())
+            var detail = new NavigationPage(new HomeView())
             {
                 BarBackgroundColor = Color.FromHex("#34495e")
             };
-            var master = new NavigationPage(new MasterView())
+            var master = new NavigationPage(new ProfileView())
             {
                 BarBackgroundColor = Color.FromHex("#2c3e50"),
                 Title="Master",

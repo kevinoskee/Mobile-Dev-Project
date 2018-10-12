@@ -17,7 +17,7 @@ namespace DashSOS.View
             var editProfileViewModel = new EditProfileViewModel(function);
             this.BindingContext = editProfileViewModel;
             editProfileViewModel.ShowAlert += (string status,string func) => ShowAlert(status,function);
-            InitializeComponent ();
+            InitializeComponent();
             ChangeButton(function);
 		}
         public void ChangeButton(string function)

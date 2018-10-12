@@ -8,6 +8,6 @@ namespace DashSOS.Interface
 {
     public interface ISQLite
     {
-       SQLiteConnection GetConnection();
+       SQLiteAsyncConnection GetConnection();
     }
 }

@@ -9,11 +9,11 @@ using DashSOS.View;
 using DashSOS.Model;
 namespace DashSOS.ViewModel
 {
-    public class MasterViewModel
+    public class ProfileViewModel
     {
         public ICommand EditProfile { protected set; get; }
 
-        public MasterViewModel()
+        public ProfileViewModel()
         {
             EditProfile = new Command(OnEditProfile);
 

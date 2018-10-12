@@ -11,14 +11,20 @@ namespace DashSOS.Model
         public string Latitude { get; set; }
         public string Location { get; set; }
     }
-    public class Emergency
+    [Table("Contact")]
+    public class Contact
     {
-
-        //   public int EmergencyId { get; set; }
-        [PrimaryKey]
+        [PrimaryKey, AutoIncrement]
+        public int ContactId { get; set; }
         public string EmergencyName { get; set; }
         public string ContactName { get; set; }
         public string ContactNumber { get; set; }
+    }
+
+    public class Message
+    {
+        [PrimaryKey]
+        public string EmergencyName { get; set; }
         public string MessageTemplate { get; set; }
     }
    public class Profile

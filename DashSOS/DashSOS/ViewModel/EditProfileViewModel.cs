@@ -5,14 +5,17 @@ using System.ComponentModel;
 using System.Windows.Input;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using DashSOS.Interface;
 using DashSOS.Model;
 using DashSOS.View;
-
+using System.IO;
+using System.Runtime.CompilerServices;
+using System.Collections.ObjectModel;
+using DashSOS.Database;
 namespace DashSOS.ViewModel
 {
     public class EditProfileViewModel
     {
+        string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),"DashSOS.db3");
         int profileId;
         private string firstName;
         public string FirstName
@@ -126,21 +129,22 @@ namespace DashSOS.ViewModel
             if(function == "edit")
                 ShowData();
         }
-        public void ShowData()
+        public async void ShowData()
         {
-            //var _db = App.ProfileDatabase.GetProfile();
-            //profileId = _db.ProfileId;
-            //firstName = _db.FirstName;
-            //middleName = _db.MiddleName;
-            //lastName = _db.LastName;
-            //houseNumber = _db.HouseNumber;
-            //street = _db.Street;
-            //barangay = _db.Barangay;
-            //town = _db.Town;
-            //city = _db.City;
-            //birthDate = _db.Birthdate;
-            //bloodGroup = _db.BloodGroup;
-            //otherInfo = _db.OtherInfo;
+            ProfileDatabase db = new ProfileDatabase(dbPath);
+            var _db = await db.GetProfileAsync();
+            profileId = _db.ProfileId;
+            firstName = _db.FirstName;
+            middleName = _db.MiddleName;
+            lastName = _db.LastName;
+            houseNumber = _db.HouseNumber;
+            street = _db.Street;
+            barangay = _db.Barangay;
+            town = _db.Town;
+            city = _db.City;
+            birthDate = _db.Birthdate;
+            bloodGroup = _db.BloodGroup;
+            otherInfo = _db.OtherInfo;
         }
         public void OnCreate()
         {
@@ -160,7 +164,8 @@ namespace DashSOS.ViewModel
                     BloodGroup = bloodGroup,
                     OtherInfo = otherInfo
                 };
-                ShowAlert(App.ProfileDatabase.AddProfile(Profile),"create");
+                ProfileDatabase db = new ProfileDatabase(dbPath);
+                ShowAlert(db.AddProfile(Profile), "create");
                
             }
             else
@@ -185,7 +190,8 @@ namespace DashSOS.ViewModel
                     BloodGroup = bloodGroup,
                     OtherInfo = otherInfo
                 };
-                ShowAlert(App.ProfileDatabase.UpdateProfile(Profile),"edit");
+                ProfileDatabase db = new ProfileDatabase(dbPath);
+                ShowAlert(db.UpdateProfile(Profile), "edit");
 
             }
             else
