@@ -20,10 +20,15 @@ namespace DashSOS.Database
         }
 
         //READ  
-        public Task<Contact> GetContactAsync(string emergency)
+        public Task<Contact> GetContactAsync(string emergency,int id = 0)
         {
-            return conn.Table<Contact>().Where(i => i.EmergencyName == emergency).FirstOrDefaultAsync();
+            return conn.Table<Contact>().Where(i => i.EmergencyName == emergency && i.ContactId == id).FirstOrDefaultAsync();
         }
+        public Task<Contact> GetNewContactAsync(string emergency)
+        {
+            return conn.Table<Contact>().Where(i => i.EmergencyName == emergency).OrderByDescending(t => t.ContactId).FirstOrDefaultAsync();
+        }
+
         public Task<List<Contact>> GetContactsAsync(string emergency)
         {
             return conn.Table<Contact>().Where(i => i.EmergencyName == emergency).ToListAsync();
@@ -57,7 +62,7 @@ namespace DashSOS.Database
         }
 
         //EDIT
-        public string UpdateEmergency(Contact contact)
+        public string UpdateContact(Contact contact)
         {
             conn.UpdateAsync(contact);
             return "success";

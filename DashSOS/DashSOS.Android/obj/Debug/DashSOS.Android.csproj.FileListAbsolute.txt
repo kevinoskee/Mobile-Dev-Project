@@ -1,14 +1,14 @@
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\DashSOS.Android.csprojResolveAssemblyReference.cache
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\DashSOS.Android.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\DashSOS.Android.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\com.companyname.DashSOS.apk
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\com.companyname.DashSOS-Signed.apk
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\DashSOS.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\DashSOS.pdb
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\DashSOS.Android.csprojResolveAssemblyReference.cache
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Base.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Maps.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\DashSOS.Android.csproj.CoreCompileInputs.cache
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\XamlC.stamp
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\DashSOS.Android.csproj.CopyComplete
@@ -33,6 +33,8 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\familyx.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xhdpi\firex.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xxhdpi\profile_small.png
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xxhdpi\person.png
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xxhdpi\phone.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\R.cs.flag
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\uploadflags.txt
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\Mono.Android.pdb
@@ -113,6 +115,7 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Xamarin.Forms.Core.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Xamarin.Forms.Xaml.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\DashSOS.Android.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\linksrc\DashSOS.pdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\linksrc\DashSOS.Android.dll.mdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\linksrc\Rg.Plugins.Popup.Droid.dll.mdb

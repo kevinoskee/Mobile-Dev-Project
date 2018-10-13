@@ -11,37 +11,29 @@
              Title="SET UP CONTACTS"
              Icon="icon.png">
 
-    <Grid Padding="20" RowSpacing="20" ColumnSpacing="20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+    <Grid Padding="20" RowSpacing="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="0.3*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <ScrollView x:Name="contacts" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" LayoutChanged="OnLayoutChanged" IsVisible="False">
-            <StackLayout  x:Name="contactList" VerticalOptions="Start">
+        <ScrollView x:Name="contacts" Grid.Row="0" IsVisible="False">
+            <StackLayout  x:Name="contactList"  VerticalOptions="Start">
             </StackLayout>
         </ScrollView>
 
-        <Label x:Name="noContact" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" IsVisible="False"
+        <Label x:Name="noContact" Grid.Row="0" IsVisible="False"
                Text="No Contacts Yet" FontSize="30" TextColor="White" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-        <Entry x:Name="messageTemplate"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
+        <!--<Entry x:Name="messageTemplate"  Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"
                Placeholder="Message Template" Text="{Binding Contact.MessageTemplate, Mode=TwoWay}" FontSize="15" TextColor="White" BackgroundColor="#B3486684"
-               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
-        <Button Grid.Row="2" Grid.Column="0"
-                x:Name="addBtn" BackgroundColor="#2ecc71" 
-                Text="ADD" FontSize="20" FontAttributes="Bold" TextColor="White"
+               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>-->
+        <Button Grid.Row="1"
+                x:Name="newBtn" BackgroundColor="#2ecc71" 
+                Text="NEW" FontSize="20" FontAttributes="Bold" TextColor="White"
                 HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-                Clicked="OnAdd"/>
-        <Button Grid.Row="2" Grid.Column="1"
-                x:Name="saveBtn" BackgroundColor="#2ecc71" 
-                Text="SAVE" FontSize="20" FontAttributes="Bold" TextColor="White"
-                HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
-                Command="{Binding Save}"/>
+                Clicked="OnNew" CornerRadius="10"/>
+
 
     </Grid>
 </ContentPage>

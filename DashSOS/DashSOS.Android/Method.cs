@@ -102,12 +102,24 @@ namespace DashSOS.Droid
                 case "deleteContact":
                     if (status == "success")
                     {
-                        toast.SetText("Contact Deleteed");
+                        toast.SetText("Contact Deleted");
                         toast.Show();
                     }
                     else
                     {
                         toast.SetText("Something wrong");
+                        toast.Show();
+                    }
+                    break;
+                case "updateContact":
+                    if (status == "success")
+                    {
+                        toast.SetText("Contact Updated");
+                        toast.Show();
+                    }
+                    else
+                    {
+                        toast.SetText("Please enter data");
                         toast.Show();
                     }
                     break;

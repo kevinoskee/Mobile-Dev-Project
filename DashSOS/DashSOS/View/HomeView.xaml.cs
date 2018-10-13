@@ -10,6 +10,7 @@ using DashSOS.ViewModel;
 using DashSOS.Extras;
 using System.IO;
 using DashSOS.Database;
+using Rg.Plugins.Popup.Services;
 namespace DashSOS.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -20,16 +21,15 @@ namespace DashSOS.View
         {
             var homeviewModel = new HomeViewModel();
             this.BindingContext = homeviewModel;
-
-           homeviewModel.ChangeButton += (string name) =>
+            homeviewModel.ChangeButton += (string name) =>
             {
                 switch (name)
                 {
-                    case "setup":
+                    case "edit":
                         configBtn.IsVisible = false;
                         doneBtn.IsVisible = true;
                         returnBtn.IsVisible = true;
-                        CheckEmergency("configureMode");
+                        CheckEmergency("editMode");
                         break;
                     case "done":
                     case "return":
@@ -53,32 +53,8 @@ namespace DashSOS.View
                 foreach (string value in emergencies)
                 {
                     ContactDatabase db = new ContactDatabase(dbPath);
-                    var _db = await db.GetContactAsync(value);
-                    if (_db == null)
-                    {
-
-                        switch (value)
-                        {
-                            case "Police":
-                                Police.Source = "policeX.png";
-                                PoliceText.TextColor = Color.SlateGray;
-                                break;
-                            case "Medical":
-                                Medical.Source = "medicalX.png";
-                                MedicalText.TextColor = Color.SlateGray;
-                                break;
-                            case "Fire":
-                                Fire.Source = "fireX.png";
-                                FireText.TextColor = Color.SlateGray;
-                                break;
-                            case "Family":
-                                Family.Source = "familyX.png";
-                                FamilyText.TextColor = Color.SlateGray;
-                                break;
-                        }
-
-                    }
-                    else
+                    var _db = await db.CountContact(value);
+                    if (_db > 0)
                     {
                         switch (value)
                         {
@@ -99,6 +75,31 @@ namespace DashSOS.View
                                 FamilyText.TextColor = Color.White;
                                 break;
                         }
+                               
+
+                    }
+                    else
+                    {
+                            switch (value)
+                            {
+                                case "Police":
+                                    Police.Source = "policeX.png";
+                                    PoliceText.TextColor = Color.SlateGray;
+                                    break;
+                                case "Medical":
+                                    Medical.Source = "medicalX.png";
+                                    MedicalText.TextColor = Color.SlateGray;
+                                    break;
+                                case "Fire":
+                                    Fire.Source = "fireX.png";
+                                    FireText.TextColor = Color.SlateGray;
+                                    break;
+                                case "Family":
+                                    Family.Source = "familyX.png";
+                                    FamilyText.TextColor = Color.SlateGray;
+                                    break;
+                            }
+                        
                     }
                 }
 

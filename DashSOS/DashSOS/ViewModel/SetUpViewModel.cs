@@ -34,6 +34,15 @@ namespace DashSOS.ViewModel
         //        NotifyPropertyChanged("Contact");
         //    }
         //}
+        private string emergencyName;
+        public string EmergencyName
+        {
+            get { return emergencyName; }
+            set
+            {
+                emergencyName = value;
+            }
+        }
         private string contactName;
         public string ContactName
         {
@@ -41,6 +50,7 @@ namespace DashSOS.ViewModel
             set
             {
                 contactName = value;
+                NotifyPropertyChanged();
             }
         }
         private string contactNumber;
@@ -50,6 +60,7 @@ namespace DashSOS.ViewModel
             set
             {
                 contactNumber = value;
+                NotifyPropertyChanged();
             }
         }
         private string contactId;
@@ -61,16 +72,12 @@ namespace DashSOS.ViewModel
                 contactId = value;
             }
         }
-        public ICommand Save { protected set; get; }
-        public ICommand Add { protected set; get; }
-        //public Action<string> ShowAlert;
-        public Action<string> AddContact;
-        public Action DisableContact;
 
         public SetUpViewModel(string emergency)
         {
-            Save = new Command(OnSave);
-            Add = new Command<string>(OnAdd);
+            emergencyName = emergency;
+           // Add = new Command(OnAdd);
+           // ShowContact("new", emergencyName);
             //contact.EmergencyName = emergency;
             //ShowData(emergency);
         }
@@ -85,55 +92,38 @@ namespace DashSOS.ViewModel
             //ContactNumber = _db.ContactNumber;
             //MessageTemplate = _db.MessageTemplate;
         }
-        public void OnSave()
-        {
+       
+        // //public void OnAdd()
+        //{
+        //    if (CheckFields())
+        //    {
+        //        ContactDatabase db = new ContactDatabase(dbPath);
+        //        var Contact = new Contact()
+        //        {
+        //            EmergencyName = emergencyName,
+        //            ContactName = contactName,
+        //            ContactNumber = contactNumber
+        //        };
+        //        //   DependencyService.Get<IToast>().Toasts("custom",emergency);
+        //        DependencyService.Get<IToast>().Toasts("addContact", db.AddContact(Contact));
+        //        ContactName = "";
+        //        ContactNumber = "";
+        //    }
+        //    else
+        //        DependencyService.Get<IToast>().Toasts("addContact", "failed");
 
-            Application.Current.MainPage = new MainPage();
-            DependencyService.Get<IToast>().Toasts("custom", "Contacts saved");
-        }
+        //}
+        //bool CheckFields()
+        //{
 
-        public void OnAdd(string emergency)
-        {
-          
-            //if (SetUpView.isFirstContact)
-            //{
-            //    AddContact(emergency);
-            //    DependencyService.Get<IToast>().Toasts("custom", "Here's your first contact");
-            //}
+        //    if (contactName != null && contactNumber != null)
+        //        return true;
+        //    else
 
-            //else
-            //{
-            //    if (CheckFields())
-            //    {
-            //        ContactDatabase db = new ContactDatabase(dbPath);
-            //        var Contact = new Contact()
-            //        {
-            //            EmergencyName = emergency,
-            //            ContactName = contactName,
-            //            ContactNumber = contactNumber
-            //        };
+        //        return false;
 
-            //        DependencyService.Get<IToast>().Toasts("addContact", db.AddContact(Contact));
-            //        DisableContact();
-            //        AddContact(emergency);
-            //        SetUpView.isFirstContact = false;
-            //    }
-            //    else
-            //        DependencyService.Get<IToast>().Toasts("custom", contactName);
-            //}
+        //}
 
-        }
-  
-        bool CheckFields()
-        {
-           
-            if (contactName != null && contactNumber != null)
-                return true;
-            else
-                return false;
-           
-        }
-      
         public void NotifyPropertyChanged([CallerMemberName]string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

@@ -24,26 +24,29 @@ namespace DashSOS.View
 	public partial class NewContact : ContentView
 	{
         string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "DashSOS.db3");
+        string emergencyName;
         public NewContact (string emergency)
 		{
             var setupViewModel = new SetUpViewModel(emergency);
             this.BindingContext = setupViewModel;
             InitializeComponent();
+            emergencyName = emergency;
 		}
         public void OnSwiped(object s, EventArgs e)
         {
-            if(Convert.ToInt32(this.contactId.Text) < 0)
                 this.IsVisible = false;
-            else
-            {
                 ContactDatabase db = new ContactDatabase(dbPath);
-                DependencyService.Get<IToast>().Toasts("deleteContact", db.DeleteContact(Convert.ToInt32(this.contactId.Text))); 
-            } 
-            SetUpView.contactToSave--;
+           
+            DependencyService.Get<IToast>().Toasts("deleteContact", db.DeleteContact(Convert.ToInt32(this.contactId.Text)));
+            MessagingCenter.Send<App>((App)Application.Current, "OnContactDeleted");
+
         }
-        public void DisableContact()
+        public void OnTapped(object s, EventArgs e)
         {
-            this.IsEnabled = false;
+            PopupNavigation.Instance.PushAsync(new EntryContactView("update",emergencyName,Convert.ToInt32(contactId.Text)));
+      
         }
+     
+
     }
 }

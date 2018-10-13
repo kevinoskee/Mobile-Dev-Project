@@ -21,7 +21,7 @@ namespace DashSOS.ViewModel
         string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),"DashSOS.db3");
         public Action<string> ChangeButton;
         public bool configStat;
-        public ICommand SetUp { protected set; get; }
+        public ICommand Edit { protected set; get; }
         public ICommand Done { protected set; get; }
         public ICommand Return { protected set; get; }
         public ICommand EmergencyTap { protected set; get; }
@@ -29,15 +29,15 @@ namespace DashSOS.ViewModel
 
         public HomeViewModel()
         {
-            SetUp = new Command(OnConfigure);
+            Edit = new Command(OnEdit);
             Done = new Command(OnDone);
             Return = new Command(OnReturn);
             EmergencyTap= new Command(OnEmergencyTap);
         }
-
-        public void OnConfigure()
+    
+        public void OnEdit()
         {
-            ChangeButton("setup");
+            ChangeButton("edit");
             configStat = true;
         }
         public void OnDone()
@@ -54,7 +54,7 @@ namespace DashSOS.ViewModel
         {
             if(configStat == true)
             {
-                await App.NavigateMasterDetail(new SetUpView(emergency.ToString()));
+              await App.NavigateMasterDetail(new SetUpView(emergency.ToString()));
                 //await App.NavigateMasterDetail(new SetUpView(emergency.ToString()));
             }
             else
@@ -92,8 +92,8 @@ namespace DashSOS.ViewModel
                 {
 
                     ContactDatabase db = new ContactDatabase(dbPath);
-                    var _db = await db.GetContactAsync(value);
-                    if (_db != null)
+                    var _db = await db.CountContact(value);
+                    if (_db > 0)
                     {
                         DependencyService.Get<IToast>().Toasts("hasData", "success");
                     }

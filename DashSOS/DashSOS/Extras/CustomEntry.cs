@@ -20,6 +20,7 @@ namespace DashSOS.Extras
             get { return (Color)GetValue(BorderColorProperty); }
             set { SetValue(BorderColorProperty, value); }
         }
+       
 
         public static readonly BindableProperty BorderWidthProperty =
         BindableProperty.Create(
