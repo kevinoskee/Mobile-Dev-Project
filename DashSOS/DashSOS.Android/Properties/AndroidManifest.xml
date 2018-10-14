@@ -4,5 +4,13 @@
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.SEND_SMS" />
-	<application android:label="DashSOS.Android"></application>
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+  <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application>
+    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCECaiBOO_Df5cJ-X6lpjkS25Bv4tbSSqE" />
+  </application>
+  <application android:label="DashSOS.Android"></application>
 </manifest>

@@ -11,6 +11,7 @@ using Plugin.Permissions;
 using Plugin.Geolocator;
 using Android.Locations;
 using Xamarin.Forms;
+using Xamarin.Forms.Maps;
 using System.Threading.Tasks;
 using Plugin.CurrentActivity;
 namespace DashSOS.Droid
@@ -29,6 +30,7 @@ namespace DashSOS.Droid
             Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Xamarin.FormsMaps.Init(this, bundle);
+            //Xamarin.Essentials.Platform.Init(this, bundle);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
 
             LoadApplication(new App());
@@ -46,7 +48,10 @@ namespace DashSOS.Droid
         {
             Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            //Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            //base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
         public void ShowGPSDisabledAlertToUser()
         {
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
