@@ -101,7 +101,8 @@ namespace DashSOS.ViewModel
 
         public async void SendMessage(string emergency)
         {
-      
+
+            //await DependencyService.Get<IGetLocation>().Location();
             string defaultMsg = "Help me";
             MessageDatabase mdb = new MessageDatabase(dbPath);
             var msg = await mdb.GetMessageAsync(emergency);
@@ -109,11 +110,11 @@ namespace DashSOS.ViewModel
                 msg.MessageTemplate = defaultMsg;
             ContactDatabase cdb = new ContactDatabase(dbPath);
             var list = await cdb.GetContactsAsync(emergency);
-            if (list.Count()>0)
+            if (list.Count() > 0)
             {
                 foreach (Contact contact in list)
                 {
-                   
+
                     DependencyService.Get<ISendSMS>().Send(contact.ContactNumber, msg.MessageTemplate);
                 }
             }

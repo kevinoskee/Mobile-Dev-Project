@@ -12,6 +12,9 @@ using System.IO;
 using DashSOS.Database;
 using Rg.Plugins.Popup.Services;
 using DashSOS.Model;
+using Plugin.Geolocator;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 namespace DashSOS.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -46,6 +49,7 @@ namespace DashSOS.View
             #endregion
             InitializeComponent();
             CheckEmergency(emergencyMode.Text);
+
         }
         
         public async void CheckEmergency(string mode)
@@ -155,5 +159,7 @@ namespace DashSOS.View
                 CheckEmergency(emergencyMode.Text);
             }
         }
+ 
+
     }
 }

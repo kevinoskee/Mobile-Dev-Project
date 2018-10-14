@@ -36,34 +36,42 @@ namespace DashSOS.Droid
 
         public async Task Location()
         {
-            var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
-            var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
-            //locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
+           
+            try
+            {
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 50;
+                var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(5));
+                //locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
 
 
-            var reversePosition = new Position(position.Latitude, position.Longitude);
-            var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
-            foreach (var address in possibleAddresses)
-                locationModel.Location += address + "\n";
+                var reversePosition = new Position(position.Latitude, position.Longitude);
+                var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
+                foreach (var address in possibleAddresses)
+                    locationModel.Location += address + "\n";
                 //reverseGeocodedOutputLabel.Text += address + "\n";
-
-            //      Toast.MakeText(Forms.Context, locationModel.Location, ToastLength.Short).Show();
+                Toast.MakeText(Forms.Context, locationModel.Location, ToastLength.Short).Show();
+            }
+            catch(Exception e)
+            {
+                Toast.MakeText(Forms.Context, e.ToString(), ToastLength.Short).Show();
+            }
+       
         }
 
         public void Send(string number, string message) //temporary
         {
 
-            String SMS_SENT = "SMS_SENT";
-            String SMS_DELIVERED = "SMS_DELIVERED";
-
-            PendingIntent sentPendingIntent = PendingIntent.GetBroadcast(Forms.Context, 0, new Intent(SMS_SENT), 0);
-            PendingIntent deliveredPendingIntent = PendingIntent.GetBroadcast(Forms.Context, 0, new Intent(SMS_DELIVERED), 0);
-
             // Get the default instance of SmsManager
-            SmsManager smsManager = SmsManager.Default;
-            // Send a text based SMS
-            smsManager.SendTextMessage(number, null, message, sentPendingIntent, deliveredPendingIntent);
+            try
+            {
+                SmsManager.Default.SendTextMessage(number, null, message, null, null);
+            }
+            catch(Exception e)
+            {
+                Toasts("permission", "Send SMS");
+            }
+           
             // For when the SMS has been sent
 
         
@@ -146,6 +154,10 @@ namespace DashSOS.Droid
                         toast.SetText("Default Message Template");
                         toast.Show();
                     }
+                    break;
+                case "permission":
+                    toast.SetText("Grant " + status + " permission in the settings first.");
+                    toast.Show();
                     break;
                 case "emergency":
                     toast.SetText(status);

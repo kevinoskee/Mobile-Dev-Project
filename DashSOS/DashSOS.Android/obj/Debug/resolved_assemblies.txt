@@ -9,8 +9,6 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Plugin.Permissions.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Rg.Plugins.Popup.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\Rg.Plugins.Popup.Droid.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\RoundedBoxView.Forms.Plugin.Abstractions.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\RoundedBoxView.Forms.Plugin.Android.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\SQLite-net.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\SQLitePCLRaw.batteries_green.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\SQLitePCLRaw.batteries_v2.dll
@@ -80,7 +78,7 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Reflection.Extensions.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Reflection.Primitives.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Threading.Tasks.dll
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Linq.Expressions.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Globalization.dll
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.Resources.ResourceManager.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\android\assets\System.ObjectModel.dll

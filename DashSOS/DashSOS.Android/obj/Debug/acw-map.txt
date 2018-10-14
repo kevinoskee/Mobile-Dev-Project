@@ -30,10 +30,6 @@ Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener, Rg.Plugins.Popup.Droi
 Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener, Rg.Plugins.Popup.Droid, Version=1.1.4.168, Culture=neutral, PublicKeyToken=null;md5167fb3d28ab218e5859eaf2aab3664d6.RgGestureDetectorListener
 Rg.Plugins.Popup.Droid.Gestures.RgGestureDetectorListener;md5167fb3d28ab218e5859eaf2aab3664d6.RgGestureDetectorListener
 rg.plugins.popup.droid.gestures.RgGestureDetectorListener;md5167fb3d28ab218e5859eaf2aab3664d6.RgGestureDetectorListener
-RoundedBoxView.Forms.Plugin.Droid.RoundedBoxViewRenderer, RoundedBoxView.Forms.Plugin.Android;md523c4062e408cfb3ae7e90e40ec108247.RoundedBoxViewRenderer
-RoundedBoxView.Forms.Plugin.Droid.RoundedBoxViewRenderer, RoundedBoxView.Forms.Plugin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md523c4062e408cfb3ae7e90e40ec108247.RoundedBoxViewRenderer
-RoundedBoxView.Forms.Plugin.Droid.RoundedBoxViewRenderer;md523c4062e408cfb3ae7e90e40ec108247.RoundedBoxViewRenderer
-roundedboxview.forms.plugin.droid.RoundedBoxViewRenderer;md523c4062e408cfb3ae7e90e40ec108247.RoundedBoxViewRenderer
 Android.Support.V4.Widget.SearchViewCompat/IOnCloseListenerImplementor, Xamarin.Android.Support.Compat;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat+IOnCloseListenerImplementor, Xamarin.Android.Support.Compat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
 Android.Support.V4.Widget.SearchViewCompat.IOnCloseListenerImplementor;mono.android.support.v4.widget.SearchViewCompat_OnCloseListenerImplementor
