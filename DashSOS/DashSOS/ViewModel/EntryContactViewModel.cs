@@ -75,19 +75,19 @@ namespace DashSOS.ViewModel
         }
         public ICommand Add { protected set; get; }
 
-        public EntryContactViewModel(string function,string emergency,int id = 0)
+        public EntryContactViewModel(string function, string emergency, int id = 0)
         {
             emergencyName = emergency;
             contactId = id;
             Add = new Command(OnAdd);
             if (function == "update")
-                ShowData(emergency,id);
+                ShowData(emergency, id);
             // ShowContact("new", emergencyName);
             //contact.EmergencyName = emergency;
             //ShowData(emergency);
         }
 
-        public async void ShowData(string emergency,int id)
+        public async void ShowData(string emergency, int id)
         {
             ContactDatabase db = new ContactDatabase(dbPath);
             var Contact = await db.GetContactAsync(emergency, id);
@@ -131,7 +131,7 @@ namespace DashSOS.ViewModel
                         await PopupNavigation.Instance.PopAsync(true);
                         break;
                 }
-                
+
             }
             else
                 DependencyService.Get<IToast>().Toasts("addContact", "failed");
@@ -156,4 +156,3 @@ namespace DashSOS.ViewModel
 
     }
 }
-

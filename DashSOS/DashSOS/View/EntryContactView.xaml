@@ -59,7 +59,9 @@
                             PlaceholderColor="Gray"
                            TextColor="Black"
                            FontAttributes="Bold"
-                         Text="{Binding ContactNumber}"
+                Keyboard="Numeric"
+                MaxLength="13"
+                         Text="{Binding ContactNumber, Mode=TwoWay}"
                HorizontalOptions="FillAndExpand"/>
 
             <!--<Entry x:Name="contactName" Grid.Row="2" Grid.Column="1"

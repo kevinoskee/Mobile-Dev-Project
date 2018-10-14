@@ -24,6 +24,9 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+    <Compile Update="View\EntryMessageView.xaml.cs">
+      <DependentUpon>EntryMessageView</DependentUpon>
+    </Compile>
     <Compile Update="View\NewContact.xaml.cs">
       <DependentUpon>NewContact.xaml</DependentUpon>
     </Compile>

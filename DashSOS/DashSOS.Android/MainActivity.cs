@@ -43,6 +43,8 @@ namespace DashSOS.Droid
             {
               //  ShowGPSDisabledAlertToUser();
             }
+
+        
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Android.Content.PM.Permission[] grantResults)
         {
@@ -67,6 +69,7 @@ namespace DashSOS.Droid
             });
             alert.Show();
         }
+
     }
 }
 

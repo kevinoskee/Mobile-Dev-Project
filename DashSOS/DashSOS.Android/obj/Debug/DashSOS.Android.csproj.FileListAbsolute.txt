@@ -35,6 +35,8 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xxhdpi\profile_small.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xxhdpi\person.png
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xxhdpi\phone.png
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable-xxhdpi\message.png
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\res\drawable\customeditor.xml
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\R.cs.flag
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\obj\Debug\uploadflags.txt
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS.Android\bin\Debug\Mono.Android.pdb

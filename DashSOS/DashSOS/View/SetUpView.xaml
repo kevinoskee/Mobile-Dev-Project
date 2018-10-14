@@ -10,7 +10,8 @@
              BackgroundColor="#2c3e50"
              Title="SET UP CONTACTS"
              Icon="icon.png">
-
+  
+   
     <Grid Padding="20" RowSpacing="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

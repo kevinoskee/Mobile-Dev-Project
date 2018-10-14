@@ -42,7 +42,8 @@ namespace DashSOS.View
             {
                 CountContact("Delete",emergency);
             });
-
+            ToolbarItems.Add(new ToolbarItem("Message", "message.png", async () => {
+                await PopupNavigation.Instance.PushAsync(new EntryMessageView(emergencyName));}));
         }
      
         public async void ShowContact(string emergency)

@@ -20,7 +20,7 @@ namespace DashSOS.Model
         public string ContactName { get; set; }
         public string ContactNumber { get; set; }
     }
-
+    [Table("Message")]
     public class Message
     {
         [PrimaryKey]

@@ -6,7 +6,6 @@ namespace DashSOS
 {
     public interface ISendSMS
     {
-        void Message(string number,string location);
         void Send(string number,string message);
     }
 }

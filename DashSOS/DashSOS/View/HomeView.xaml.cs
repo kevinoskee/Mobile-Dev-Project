@@ -11,6 +11,7 @@ using DashSOS.Extras;
 using System.IO;
 using DashSOS.Database;
 using Rg.Plugins.Popup.Services;
+using DashSOS.Model;
 namespace DashSOS.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -105,8 +106,9 @@ namespace DashSOS.View
                         
                     }
                 }
+             
 
-            }
+                }
 
             else
             {

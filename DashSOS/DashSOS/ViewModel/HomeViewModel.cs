@@ -22,7 +22,7 @@ namespace DashSOS.ViewModel
         string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal),"DashSOS.db3");
         public event PropertyChangedEventHandler PropertyChanged;
         public Action<string> ChangeButton;
-        public bool configStat;
+        public bool hasContact;
         public ICommand Edit { protected set; get; }
         public ICommand Done { protected set; get; }
         public ICommand Return { protected set; get; }
@@ -45,6 +45,7 @@ namespace DashSOS.ViewModel
             //Done = new Command(OnDone);
             //Return = new Command(OnReturn);
             EmergencyTap= new Command(OnEmergencyTap);
+            InitMessage();
 
         }
     
@@ -73,52 +74,52 @@ namespace DashSOS.ViewModel
             else
             {
                 //GetModel(emergency);
-                // TestMessage();
-                TestToast(emergency.ToString());
+                SendMessage(emergency.ToString());
+                
             }
         }
-        public void GetModel(object emergency)
-        {
-        //    switch (emergency)
-        //    {
-        //        //case "medical":
-        //        //    //insert database process
-
-        //        //    //temporary
-        //        //    EmergencyModel.ContactName = "Asian Hospital";
-        //        //    EmergencyModel.ContactNumber = "09478227779";
-        //        //    EmergencyModel.MessageTemplate = "I need medical emergency";
-        //        //    DependencyService.Get<ISendSMS>().Send(EmergencyModel.ContactNumber, EmergencyModel.MessageTemplate);                 
-        //        //    break;
-        //    }
-        }
-
-
-    
-        public async void TestToast(string emergency)
+        public async void InitMessage()
         {
             string[] emergencies = { "Police", "Medical", "Fire", "Family" };
             foreach (string value in emergencies)
             {
-                if(value == emergency)
-                {
 
-                    ContactDatabase db = new ContactDatabase(dbPath);
-                    var _db = await db.CountContact(value);
-                    if (_db > 0)
+                MessageDatabase db = new MessageDatabase(dbPath);
+                var _db = await db.GetMessageAsync(value);
+                if (_db == null)
+                {
+                    var Message = new Message()
                     {
-                        DependencyService.Get<IToast>().Toasts("hasData", "success");
-                    }
-                    else
-                    {
-                        DependencyService.Get<IToast>().Toasts("hasData", "failed");
-                    }
+                        EmergencyName = value,
+                    };
+                    db.AddMessage(Message);
                 }
-                
+
             }
+
         }
 
-
+        public async void SendMessage(string emergency)
+        {
+      
+            string defaultMsg = "Help me";
+            MessageDatabase mdb = new MessageDatabase(dbPath);
+            var msg = await mdb.GetMessageAsync(emergency);
+            if (msg.MessageTemplate == null)
+                msg.MessageTemplate = defaultMsg;
+            ContactDatabase cdb = new ContactDatabase(dbPath);
+            var list = await cdb.GetContactsAsync(emergency);
+            if (list.Count()>0)
+            {
+                foreach (Contact contact in list)
+                {
+                   
+                    DependencyService.Get<ISendSMS>().Send(contact.ContactNumber, msg.MessageTemplate);
+                }
+            }
+            else
+                DependencyService.Get<IToast>().Toasts("hasData", "failed");
+        }
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
