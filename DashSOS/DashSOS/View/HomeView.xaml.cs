@@ -21,34 +21,37 @@ namespace DashSOS.View
         {
             var homeviewModel = new HomeViewModel();
             this.BindingContext = homeviewModel;
-            homeviewModel.ChangeButton += (string name) =>
-            {
-                switch (name)
-                {
-                    case "edit":
-                        configBtn.IsVisible = false;
-                        doneBtn.IsVisible = true;
-                        returnBtn.IsVisible = true;
-                        CheckEmergency("editMode");
-                        break;
-                    case "done":
-                    case "return":
-                        configBtn.IsVisible = true;
-                        doneBtn.IsVisible = false;
-                        returnBtn.IsVisible = false;
-                        CheckEmergency("readyMode");
-                        break;
+            #region change
+            //homeviewModel.ChangeButton += (string name) =>
+            //{
+            //    switch (name)
+            //    {
+            //        case "edit":
+            //            //configBtn.IsVisible = false;
+            //            //doneBtn.IsVisible = true;
+            //            //returnBtn.IsVisible = true;
+            //            CheckEmergency("editMode");
+            //            break;
+            //        case "done":
+            //        case "return":
+            //            //configBtn.IsVisible = true;
+            //            //doneBtn.IsVisible = false;
+            //            //returnBtn.IsVisible = false;
+            //            CheckEmergency("readyMode");
+            //            break;
 
-                }               
-            };
+            //    }               
+            //};
+            #endregion
             InitializeComponent();
-            CheckEmergency("readyMode");
+            CheckEmergency(emergencyMode.Text);
         }
         
         public async void CheckEmergency(string mode)
         {
+          
             string[] emergencies = { "Police", "Medical", "Fire", "Family" };
-            if (mode == "readyMode")
+            if (mode == "Emergency Mode")
             {
                 foreach (string value in emergencies)
                 {
@@ -130,6 +133,24 @@ namespace DashSOS.View
                     }
                 }
 
+            }
+        }
+
+        public void OnToggled(object s, ToggledEventArgs e)
+        {
+
+
+            if (switchBtn.IsToggled)
+            {
+                emergencyMode.Text = "Emergency Mode";
+                modeFrame.BackgroundColor = Color.FromHex("#e74c3c");
+                CheckEmergency(emergencyMode.Text);
+            }
+            else
+            {
+                emergencyMode.Text = "Setup Mode";
+                modeFrame.BackgroundColor = Color.FromHex("#2ecc71");
+                CheckEmergency(emergencyMode.Text);
             }
         }
     }

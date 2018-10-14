@@ -15,7 +15,6 @@ C:\Users\DeLL\Downloads\Mobile-Dev-Project-Kevin2\Mobile-Dev-Project-Kevin2\Dash
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.deps.json
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.pdb
-C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.csprojResolveAssemblyReference.cache
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\View\EditProfileView.xaml.g.cs
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\View\EntryContactView.xaml.g.cs
@@ -30,3 +29,4 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Deb
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.dll
 C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.pdb
+C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.csprojResolveAssemblyReference.cache

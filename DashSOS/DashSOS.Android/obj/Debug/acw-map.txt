@@ -2,6 +2,10 @@ DashSOS.Droid.CustomEntryRenderer, DashSOS.Android;md5f3107be143d5affda8008bbe26
 DashSOS.Droid.CustomEntryRenderer, DashSOS.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f3107be143d5affda8008bbe26c5d8ba.CustomEntryRenderer
 DashSOS.Droid.CustomEntryRenderer;md5f3107be143d5affda8008bbe26c5d8ba.CustomEntryRenderer
 dashsos.droid.CustomEntryRenderer;md5f3107be143d5affda8008bbe26c5d8ba.CustomEntryRenderer
+DashSOS.Droid.CustomSwitchRenderer, DashSOS.Android;md5f3107be143d5affda8008bbe26c5d8ba.CustomSwitchRenderer
+DashSOS.Droid.CustomSwitchRenderer, DashSOS.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f3107be143d5affda8008bbe26c5d8ba.CustomSwitchRenderer
+DashSOS.Droid.CustomSwitchRenderer;md5f3107be143d5affda8008bbe26c5d8ba.CustomSwitchRenderer
+dashsos.droid.CustomSwitchRenderer;md5f3107be143d5affda8008bbe26c5d8ba.CustomSwitchRenderer
 DashSOS.Droid.MainActivity, DashSOS.Android;md5f3107be143d5affda8008bbe26c5d8ba.MainActivity
 DashSOS.Droid.MainActivity, DashSOS.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5f3107be143d5affda8008bbe26c5d8ba.MainActivity
 DashSOS.Droid.MainActivity;md5f3107be143d5affda8008bbe26c5d8ba.MainActivity
