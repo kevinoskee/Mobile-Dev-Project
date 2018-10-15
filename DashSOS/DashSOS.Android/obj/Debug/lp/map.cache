@@ -5,8 +5,6 @@ Plugin.Geolocator
 Plugin.Permissions
 Rg.Plugins.Popup
 Rg.Plugins.Popup.Droid
-RoundedBoxView.Forms.Plugin.Abstractions
-RoundedBoxView.Forms.Plugin.Android
 SQLite-net
 SQLitePCLRaw.batteries_green
 SQLitePCLRaw.batteries_v2

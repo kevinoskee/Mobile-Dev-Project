@@ -74,7 +74,8 @@ namespace DashSOS.ViewModel
             else
             {
                 //GetModel(emergency);
-                SendMessage(emergency.ToString());
+                // SendMessage(emergency.ToString());
+                DependencyService.Get<IGetLocation>().Test();
                 
             }
         }

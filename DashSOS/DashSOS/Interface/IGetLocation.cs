@@ -7,5 +7,6 @@ namespace DashSOS
     public interface IGetLocation
     {
         Task Location();
+        void Test();
     }
 }

@@ -169,22 +169,22 @@ namespace DashSOS.Droid
                     break;
             }
         }
-        public async void Test()
-        {
-            Toast.MakeText(Forms.Context, "Getting Location", ToastLength.Short).Show();
-            string strLocation="";
-            var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
-            var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20));
-            //locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
+        //public async void Test()
+        //{
+        //    Toast.MakeText(Forms.Context, "Getting Location", ToastLength.Short).Show();
+        //    string strLocation="";
+        //    var locator = CrossGeolocator.Current;
+        //    locator.DesiredAccuracy = 50;
+        //    var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20));
+        //    //locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
 
-            var reversePosition = new Position(position.Latitude, position.Longitude);
-            var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
-            foreach (var address in possibleAddresses)
-                strLocation += address + "\n";
+        //    var reversePosition = new Position(position.Latitude, position.Longitude);
+        //    var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
+        //    foreach (var address in possibleAddresses)
+        //        strLocation += address + "\n";
 
-            Toast.MakeText(Forms.Context, strLocation, ToastLength.Short).Show();
-        }
+        //    Toast.MakeText(Forms.Context, strLocation, ToastLength.Short).Show();
+        //}
         public void HideKeyboard()
         {
             var context = Forms.Context;
@@ -198,6 +198,40 @@ namespace DashSOS.Droid
                 activity.Window.DecorView.ClearFocus();
             }
         }
+        public async void Test()
+        {
+            Toast.MakeText(Forms.Context, "Getting Location", ToastLength.Short).Show();
+            string strLocation = "";
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 50;
+            var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20));
+            locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
+            Toasts("custom", locationModel.Location);
 
+            //Toasts("custom", "CHECKPOINT 1 : " + position.Longitude.ToString());
+            //var reversePosition = new Position(40.714224, -73.961452);
+            ////var reversePosition = new Position(position.Latitude, position.Longitude);
+            //Toasts("custom", "CHKPT2 : " + position.Latitude + " " + reversePosition.Latitude);
+            //try
+            //{
+            //    var possibleAddresses = (await geoCoder.GetAddressesForPositionAsync(reversePosition)).FirstOrDefault();
+
+            //    //foreach (var address in possibleAddresses)
+            //    Toasts("custom", strLocation += possibleAddresses + "\n");
+            //}
+            //catch (Exception e)
+            //{
+            //    Toasts("custom", "CANT FIND REVERSE at " + reversePosition.Latitude + ", " + reversePosition.Longitude);
+            //}
+            ///*
+            //var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
+            //Console.WriteLine("CHKPT3");
+            //foreach (var address in possibleAddresses)
+            //    strLocation += address + "\n";
+            //*/
+
+
+           
+        }
     }
 }
