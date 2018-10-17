@@ -15,6 +15,7 @@ using DashSOS.Database;
 using System.IO;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using Plugin.LocalNotifications;
 namespace DashSOS.ViewModel
 {
     public class HomeViewModel : INotifyPropertyChanged
@@ -73,10 +74,11 @@ namespace DashSOS.ViewModel
             }
             else
             {
-                //GetModel(emergency);
-                // SendMessage(emergency.ToString());
-                DependencyService.Get<IGetLocation>().Test();
-                
+                ///GetModel(emergency);
+                SendMessage(emergency.ToString());
+               // DependencyService.Get<IGetLocation>().Test();
+               // CrossLocalNotifications.Current.Show("title", "body");
+
             }
         }
         public async void InitMessage()

@@ -28,7 +28,7 @@
                 <!--<RowDefinition Height="Auto"/>-->
             </Grid.RowDefinitions>
             <Label x:Name="emergencyName" TextColor="Transparent" Grid.Row="0" Text="{Binding EmergencyName, Mode=TwoWay}"/>
-            <custom:CustomEditor    x:Name="messageTemplate" Text="{Binding MessageTemplate, Mode=TwoWay}"  FontSize="17"      Placeholder="Message Template"      Grid.Row ="0" 
+            <custom:CustomEditor    x:Name="messageTemplate" Text="{Binding MessageTemplate, Mode=TwoWay}"  FontSize="17" Placeholder="Message Template"      Grid.Row ="0" 
             Grid.ColumnSpan="2"  HorizontalOptions="Fill"
             VerticalOptions="Fill" HeightRequest="100"    TextColor="Black"
                            FontAttributes="Bold"/>

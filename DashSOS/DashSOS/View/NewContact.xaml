@@ -42,7 +42,7 @@
            
         </Grid>
     </Frame>
-    
+
     <Frame.GestureRecognizers>
         <SwipeGestureRecognizer 
                                 Swiped="OnSwiped"

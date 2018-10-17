@@ -60,7 +60,7 @@
                            TextColor="Black"
                            FontAttributes="Bold"
                 Keyboard="Numeric"
-                MaxLength="13"
+                MaxLength="11"
                          Text="{Binding ContactNumber, Mode=TwoWay}"
                HorizontalOptions="FillAndExpand"/>
 

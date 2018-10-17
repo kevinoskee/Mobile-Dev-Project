@@ -2,6 +2,8 @@ DashSOS
 FormsViewGroup
 Plugin.CurrentActivity
 Plugin.Geolocator
+Plugin.LocalNotifications.Abstractions
+Plugin.LocalNotifications
 Plugin.Permissions
 Rg.Plugins.Popup
 Rg.Plugins.Popup.Droid

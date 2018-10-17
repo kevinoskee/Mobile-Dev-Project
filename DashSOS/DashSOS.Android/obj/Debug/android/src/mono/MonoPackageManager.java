@@ -111,6 +111,8 @@ class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"Plugin.CurrentActivity.dll",
 		"Plugin.Geolocator.dll",
+		"Plugin.LocalNotifications.Abstractions.dll",
+		"Plugin.LocalNotifications.dll",
 		"Plugin.Permissions.dll",
 		"Rg.Plugins.Popup.dll",
 		"Rg.Plugins.Popup.Droid.dll",

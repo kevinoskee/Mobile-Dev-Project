@@ -19,17 +19,27 @@ namespace DashSOS.Droid
     [Activity(Label = "DashSOS", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        int powercount = 0;
+        Intent intent;
+        private PowerButtonService powerButtonService;
+        Context ctx;
+        public Context GetCtx()
+        {
+            return ctx;
+        }
         protected async override void OnCreate(Bundle bundle)
         {
             await TryToGetPermissions();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-          
+
 
             base.OnCreate(bundle);
+            //var intent = new Intent(ApplicationContext, typeof(PowerButtonService));
+            //var source = PendingIntent.GetBroadcast(ApplicationContext, 0, intent, 0);
 
             Rg.Plugins.Popup.Popup.Init(this, bundle);
-            
+
             Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.Forms.Forms.Init(this, bundle);
             Xamarin.FormsMaps.Init(this, bundle);
@@ -39,16 +49,18 @@ namespace DashSOS.Droid
 
             LocationManager locationManager = (LocationManager)Forms.Context.GetSystemService(Context.LocationService);
 
-            
+
 
             if (locationManager.IsProviderEnabled(LocationManager.GpsProvider) == false)
             {
-               // ShowGPSDisabledAlertToUser();
+                // ShowGPSDisabledAlertToUser();
             }
-
-        
+            IntentFilter filter = new IntentFilter(Intent.ActionScreenOn);
+            filter.AddAction(Intent.ActionScreenOff);
+            filter.AddAction(Intent.ActionUserPresent);
+            ScreenReceiver myReceiver = new ScreenReceiver();
+            RegisterReceiver(myReceiver, filter);
         }
-       
         public void ShowGPSDisabledAlertToUser()
         {
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
@@ -90,13 +102,6 @@ namespace DashSOS.Droid
         {
             const string permission = Manifest.Permission.AccessFineLocation;
 
-            if (CheckSelfPermission(permission) == (int)Android.Content.PM.Permission.Granted)
-            {
-                //TODO change the message to show the permissions name
-                Toast.MakeText(this, "Special permissions granted", ToastLength.Short).Show();
-                return;
-            }
-
             if (ShouldShowRequestPermissionRationale(permission))
             {
                 //set alert for executing the task
@@ -131,13 +136,13 @@ namespace DashSOS.Droid
                     {
                         if (grantResults[0] == (int)Android.Content.PM.Permission.Granted)
                         {
-                            Toast.MakeText(this, "Permissions granted", ToastLength.Short).Show();
+                            //  Toast.MakeText(this, "Permissions granted", ToastLength.Short).Show();
 
                         }
                         else
                         {
                             //Permission Denied :(
-                            Toast.MakeText(this, "Permissions denied", ToastLength.Short).Show();
+                            Toast.MakeText(this, "Permissions denied. Set in settings.", ToastLength.Short).Show();
 
                         }
                     }
@@ -145,7 +150,34 @@ namespace DashSOS.Droid
             }
             //base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
-      
+        public override void OnBackPressed()
+        {
+            if (Rg.Plugins.Popup.Popup.SendBackPressed(base.OnBackPressed))
+            {
+                // Do something if there are some pages in the `PopupStack`
+            }
+            else
+            {
+                // Do something if there are not any pages in the `PopupStack`
+            }
+
+        }
+        //[Android.Runtime.Register("DispatchKeyEvent", "(Landroid/view/KeyEvent;)Z", "GetDispatchKeyEvent_Landroid_view_KeyEvent_Handler")]
+        //public override bool DispatchKeyEvent(KeyEvent e)
+        //{
+
+        //    if (e.KeyCode == Keycode.Power)
+        //    {
+        //        powercount++;
+        //        if (powercount == 2)
+        //        {
+
+        //            DependencyService.Get<IGetLocation>().Test();
+        //        }
+        //    }
+        //    return base.DispatchKeyEvent(e);
+        //    return true;
+        //}
     }
 }
 
