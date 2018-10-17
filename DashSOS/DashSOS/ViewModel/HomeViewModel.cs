@@ -75,8 +75,8 @@ namespace DashSOS.ViewModel
             else
             {
                 ///GetModel(emergency);
-                SendMessage(emergency.ToString());
-               // DependencyService.Get<IGetLocation>().Test();
+                //SendMessage(emergency.ToString());
+               await DependencyService.Get<IGetLocation>().Location();
                // CrossLocalNotifications.Current.Show("title", "body");
 
             }

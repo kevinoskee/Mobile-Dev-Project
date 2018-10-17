@@ -32,7 +32,7 @@ namespace DashSOS.Droid
       
         public LocationModel locationModel = new LocationModel { };
         
-        Geocoder geoCoder;
+        Geocoder geoCoder = new Geocoder();
         public void Message(string number,string message)
         {
         //    Toast.MakeText(Forms.Context, locationModel.Location, ToastLength.Short).Show();
@@ -41,27 +41,25 @@ namespace DashSOS.Droid
 
         public async Task Location()
         {
-           
+            Toast.MakeText(Forms.Context, "Getting Location", ToastLength.Short).Show();
+            string strLocation = "";
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 50;
+            
             try
             {
-                var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 50;
-                var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(5));
-                //locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
-
-
+                var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20));
+                locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
                 var reversePosition = new Position(position.Latitude, position.Longitude);
-                var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
-                foreach (var address in possibleAddresses)
-                    locationModel.Location += address + "\n";
-                //reverseGeocodedOutputLabel.Text += address + "\n";
-                Toast.MakeText(Forms.Context, locationModel.Location, ToastLength.Short).Show();
+                var possibleAddresses = (await geoCoder.GetAddressesForPositionAsync(reversePosition)).FirstOrDefault();
+                Toasts("custom", possibleAddresses);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                Toast.MakeText(Forms.Context, e.ToString(), ToastLength.Short).Show();
+                Toasts("custom", e.ToString());
             }
-       
+
+
         }
 
         public void Send(string number, string message) //temporary
@@ -216,45 +214,14 @@ namespace DashSOS.Droid
                 .SetAutoCancel(true);
             var notificationManager = NotificationManager.FromContext(Android.App.Application.Context);
             notificationManager.Notify(randomNumber, builder.Build());
-            
 
 
-            //LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.icon;
-            //CrossLocalNotifications.Current.Show("title", "body");
-            //Toast.MakeText(Forms.Context, "Getting Location", ToastLength.Short).Show();
-            //string strLocation = "";
-            //var locator =  CrossGeolocator.Current;
-            //locator.DesiredAccuracy = 50;
-            //var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20));
-            //locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
-            //Toasts("custom", locationModel.Location);
 
-            //Toasts("custom", "CHECKPOINT 1 : " + position.Longitude.ToString());
-            //var reversePosition = new Position(40.714224, -73.961452);
-            ////var reversePosition = new Position(position.Latitude, position.Longitude);
-            //Toasts("custom", "CHKPT2 : " + position.Latitude + " " + reversePosition.Latitude);
-            //try
-            //{
-            //    var possibleAddresses = (await geoCoder.GetAddressesForPositionAsync(reversePosition)).FirstOrDefault();
-
-            //    //foreach (var address in possibleAddresses)
-            //    Toasts("custom", strLocation += possibleAddresses + "\n");
-            //}
-            //catch (Exception e)
-            //{
-            //    Toasts("custom", "CANT FIND REVERSE at " + reversePosition.Latitude + ", " + reversePosition.Longitude);
-            //}
-            ///*
-            //var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
-            //Console.WriteLine("CHKPT3");
-            //foreach (var address in possibleAddresses)
-            //    strLocation += address + "\n";
-            //*/
-
+           
 
 
         }
-       
+
 
 
 

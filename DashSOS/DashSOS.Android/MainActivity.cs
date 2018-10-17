@@ -97,6 +97,14 @@ namespace DashSOS.Droid
                             Manifest.Permission.AccessCoarseLocation,
                             Manifest.Permission.AccessFineLocation,
                             Manifest.Permission.SendSms,
+                            Manifest.Permission.AccessNotificationPolicy,
+                            Manifest.Permission.AccessLocationExtraCommands,
+                            Manifest.Permission.AccessMockLocation,
+                            Manifest.Permission.AccessNetworkState,
+                            Manifest.Permission.AccessWifiState,
+                            Manifest.Permission.Internet,
+                            Manifest.Permission.Camera
+
              };
         async Task GetPermissionsAsync()
         {
