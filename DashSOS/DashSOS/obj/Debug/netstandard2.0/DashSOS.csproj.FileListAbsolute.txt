@@ -30,7 +30,6 @@ C:\Users\Kevin\Documents\Mobile App Dev\Projects\DashSOS\DashSOS\DashSOS\obj\Deb
 C:\Users\DeLL\source\repos\kevinoskee\Mobile-Dev-Project\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.deps.json
 C:\Users\DeLL\source\repos\kevinoskee\Mobile-Dev-Project\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.dll
 C:\Users\DeLL\source\repos\kevinoskee\Mobile-Dev-Project\DashSOS\DashSOS\bin\Debug\netstandard2.0\DashSOS.pdb
-C:\Users\DeLL\source\repos\kevinoskee\Mobile-Dev-Project\DashSOS\DashSOS\obj\Debug\netstandard2.0\DashSOS.csprojAssemblyReference.cache
 C:\Users\DeLL\source\repos\kevinoskee\Mobile-Dev-Project\DashSOS\DashSOS\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\DeLL\source\repos\kevinoskee\Mobile-Dev-Project\DashSOS\DashSOS\obj\Debug\netstandard2.0\View\ConfigureView.xaml.g.cs
 C:\Users\DeLL\source\repos\kevinoskee\Mobile-Dev-Project\DashSOS\DashSOS\obj\Debug\netstandard2.0\View\DetailView.xaml.g.cs

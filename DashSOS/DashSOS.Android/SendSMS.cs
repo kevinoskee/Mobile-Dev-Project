@@ -25,7 +25,7 @@ namespace DashSOS.Droid
     public class SendSMS : ISendSMS,IGetLocation
     {
         public LocationModel locationModel = new LocationModel { };
-        Geocoder geoCode;
+        Geocoder geoCoder = new Geocoder();
         public void Message(string number,string message)
         {
         //    Toast.MakeText(Forms.Context, locationModel.Location, ToastLength.Short).Show();
@@ -41,7 +41,7 @@ namespace DashSOS.Droid
 
 
             var reversePosition = new Position(position.Latitude, position.Longitude);
-            var possibleAddresses = await geoCode.GetAddressesForPositionAsync(reversePosition);
+            var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
             foreach (var address in possibleAddresses)
                 locationModel.Location += address + "\n";
                 //reverseGeocodedOutputLabel.Text += address + "\n";
@@ -63,7 +63,7 @@ namespace DashSOS.Droid
             Toast.MakeText(Forms.Context, "Getting Location", ToastLength.Short).Show();
             string strLocation="";
             var locator = CrossGeolocator.Current;
-            locator.DesiredAccuracy = 50;
+            locator.DesiredAccuracy = 70;
             var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20));
             locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
             Console.WriteLine(locationModel.Location);
@@ -74,14 +74,15 @@ namespace DashSOS.Droid
             Console.WriteLine("CHKPT2 : " + position.Latitude + " " + reversePosition.Latitude);
             try
             {
-                var possibleAddresses = (await geoCode.GetAddressesForPositionAsync(reversePosition)).FirstOrDefault();
-
+                var possibleAddresses = (await geoCoder.GetAddressesForPositionAsync(reversePosition)).FirstOrDefault();
+                Console.WriteLine(possibleAddresses);
                 //foreach (var address in possibleAddresses)
-                Console.WriteLine(strLocation += possibleAddresses + "\n");
+                //Console.WriteLine(strLocation += possibleAddresses + "|");
             }
             catch(Exception e)
             {
                 Console.WriteLine("CANT FIND REVERSE at " + reversePosition.Latitude + ", " + reversePosition.Longitude);
+                Console.WriteLine(e);
             }
             /*
             var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(reversePosition);
