@@ -66,22 +66,14 @@ namespace DashSOS.Droid
             locator.DesiredAccuracy = 70;
             var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20));
             locationModel.Location = "Location : Longitude - " + position.Longitude.ToString() + ",\n\tLatitude - " + position.Latitude.ToString();
-            Console.WriteLine(locationModel.Location);
-
-            Console.WriteLine("CHECKPOINT 1 : " + position.Longitude.ToString());
-            var reversePosition = new Position(40.714224, -73.961452);
-            //var reversePosition = new Position(position.Latitude, position.Longitude);
-            Console.WriteLine("CHKPT2 : " + position.Latitude + " " + reversePosition.Latitude);
+            var reversePosition = new Position(position.Latitude, position.Longitude);
             try
             {
                 var possibleAddresses = (await geoCoder.GetAddressesForPositionAsync(reversePosition)).FirstOrDefault();
                 Console.WriteLine(possibleAddresses);
-                //foreach (var address in possibleAddresses)
-                //Console.WriteLine(strLocation += possibleAddresses + "|");
             }
             catch(Exception e)
             {
-                Console.WriteLine("CANT FIND REVERSE at " + reversePosition.Latitude + ", " + reversePosition.Longitude);
                 Console.WriteLine(e);
             }
             /*
